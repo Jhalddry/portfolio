@@ -11,7 +11,7 @@ export const AnimationType = () => {
                 1000, // wait 1s before replacing "Mice" with "Hamsters"
                 "Frontend Developer",
                 1000,
-                "Next React Express",
+                "Next React Native",
                 1000,
               ]}
               wrapper="span"

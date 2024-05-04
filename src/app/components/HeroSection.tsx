@@ -24,7 +24,7 @@ export const HeroSection = () => {
             <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-white hover:bg-slate-200 text-black">
               Contactame
             </button>
-            <button className="px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-[#C6D8F7] via-[#1ABC9C] to-[#3b3f47] hover:bg-slate-800 text-white mt-3">
+            <button className="px-0.5 py-0.5 w-full sm:w-fit rounded-full bg-gradient-to-br from-[#C6D8F7] via-[#1ABC9C] to-[#3b3f47] hover:bg-slate-800 text-white mt-3">
               <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2 ">
                 Descargar CV
               </span>
