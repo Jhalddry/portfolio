@@ -1,11 +1,17 @@
 import React from "react";
 
-const ProjectCard = ({ imgUrl, title, description }) => {
+type Props = {
+  title: String;
+  description: String;
+  image: String;
+};
+
+const ProjectCard = ({ title, description, image }: Props) => {
   return (
     <div>
       <div
         className="h-52 md:h-72"
-        style={{ background: `url(${imgUrl})`, backgroundSize: "cover" }}
+        style={{ background: `url(${image})`, backgroundSize: "cover" }}
       ></div>
       <div className="text-white">
         <h5>{title}</h5>
