@@ -1,4 +1,4 @@
-const TabButton = ({ active, selectTab, children }) => {
+const TabButton = ({ active, selectTab, children }: { active: boolean, selectTab: () => void, children: React.ReactNode }) => {
   const buttonClasses = active
     ? "text-white border-b border-blue-200"
     : "text-[#88cbcf]";

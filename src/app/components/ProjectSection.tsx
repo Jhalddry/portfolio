@@ -1,58 +1,65 @@
-import ProjectCard from "./helpers/ProjectCard";
+"use client";
 
-const projectsData = [
-  {
-    id: 1,
-    title: "Tic Tac Toe",
-    description:
-      "Un juego clásico de Tic Tac Toe creado con JavaScript, HTML y CSS. Permite a dos jugadores jugar en una cuadrícula de 3x3, mostrando habilidades en desarrollo web, manejo de eventos y actualización dinámica de la interfaz.",
-    image: "https://via.placeholder.com/300x200",
-    url: "https://tic-tac-toe-jhalddry.netlify.app/",
-    tag: ["All", "React", "CSS"],
-  },
-  {
-    id: 2,
-    title: "Pomodoro Timer",
-    description:
-      "Un temporizador Pomodoro desarrollado con React Native y Expo Go. Esta app ayuda a gestionar el tiempo de trabajo y descanso, ofreciendo una interfaz simple y fácil de usar. ",
-    image: "https://via.placeholder.com/300x200",
-    // url: "https://66442ec965508a41d251c757--pomodoro-native-jhalddry.netlify.app",
-    tag: ["All", "React", "Native"],
-  },
-  {
-    id: 3,
-    title: "Pokemon Dashboard",
-    description:
-      "Un panel de control de Pokémon desarrollado con Next.js. Esta aplicación muestra información detallada sobre varios Pokémon, utilizando una interfaz moderna y reactiva. Incluye una sección de favoritos que mantiene el estado entre sesiones y un widget vinculado al counter.",
-    image: "https://via.placeholder.com/300x200",
-    // url: "https://pokemon-nextjs-jhalddry-jhalddrys-projects.vercel.app/",
-    tag: ["All", "React", "Next.js"],
-  },
-  {
-    id: 4,
-    title: "Gif Searcher",
-    description:
-      "Una aplicación desarrollada en React para buscar y mostrar gifs.",
-    image: "../../public/images/gifs.png",
-    // url: "https://gif-searcher-jhalddry.netlify.app/",
-    tag: ["All", "React", "CSS"],
-  },
-];
+import { useState } from "react";
+import ProjectCard from "./helpers/ProjectCard";
+import projectsData from "./helpers/projectsData";
+import ProjectTag from "./ProjectTag";
 
 const ProjectSection = () => {
-  <>
-    <h2>Mis Proyectos</h2>
-    <div>
-      {projectsData.map((project) => (
-        <ProjectCard
-          key={project.id}
-          title={project.title}
-          description={project.description}
-          image={project.image}
+  const [tag, setTag] = useState("All");
+
+  const handleTagClick = (newTag: string) => {
+    setTag(newTag);
+  };
+
+  const filteredProjects = projectsData.filter((project: any) => project.tag.includes(tag));
+
+  return (
+    <>
+      <h2 className="text-center text-4xl font-bold text-white mt-4">
+        Mis Proyectos
+      </h2>
+      <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
+        <ProjectTag
+          onClick={() => handleTagClick("All")}
+          name="All"
+          isSelected={tag === "All"}
         />
-      ))}
-    </div>
-  </>;
+
+        <ProjectTag
+          onClick={() => handleTagClick("React")}
+          name="React"
+          isSelected={tag === "React"}
+        />
+
+        <ProjectTag
+          onClick={() => handleTagClick("Native")}
+          name="Native"
+          isSelected={tag === "Native"}
+        />
+
+        <ProjectTag
+          onClick={() => handleTagClick("NextJS")}
+          name="NextJS"
+          isSelected={tag === "NextJS"}
+        />
+      </div>
+      <div
+        className="grid md:grid-cols-3 gap-8 md:gap-12">
+        {filteredProjects.map((project: any) => (
+          <ProjectCard
+            key={project.id}
+            title={project.title}
+            description={project.description}
+            image={project.image}
+            gitUrl={project.gitUrl}
+            previewUrl={project.url}
+            tag={project.tag}
+          />
+        ))}
+      </div>
+    </>
+  )
 };
 
 export default ProjectSection;
