@@ -11,7 +11,7 @@ const ContactSection = () => {
         <p className="text-gray-400 max-w-md">
           Si tienes alguna pregunta o simplemente quieres contactarme, no dudes en escribirme y ver mi trabajo.
         </p>
-        <div className="flex items-center space-x-4 mt-6">
+        <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4 mt-6">
           <Link href="https://github.com/jhalddry" target="_blank">
             <div className="bg-gradient-to-r from-gray-200 to-white p-2 rounded-full w-10 h-10 flex items-center justify-center">
               <Image src="/icons/Github.svg" width={24} height={24} alt="GitHub" className="cursor-pointer w-6 h-6" />
@@ -22,12 +22,13 @@ const ContactSection = () => {
               <Image src="/icons/Linkedin.svg" width={24} height={24} alt="LinkedIn" className="cursor-pointer w-6 h-6" />
             </div>
           </Link>
-          <div className="flex items-center">
-            <div className="bg-white p-1 rounded-md w-9 h-9 flex items-center justify-center">
-              <Image src="/icons/Gmail.svg" width={24} height={24} alt="Email" className="w-7 h-7" />
-            </div>
-            <span className="text-md ml-2 font-bold text-[#ADB7BE]">jhalddryg@gmail.com</span>
+        </div>
+        <hr className="border-gray-700 md:mt-8 w-full mx-auto md:mx-0" />
+        <div className="flex flex-col items-center mt-4 md:flex-row md:justify-center md:mt-0">
+          <div className="bg-white p-1 rounded-md w-9 h-9 flex items-center justify-center">
+            <Image src="/icons/Gmail.svg" width={24} height={24} alt="Email" className="w-7 h-7" />
           </div>
+          <span className="text-md ml-2 font-bold text-[#ADB7BE] md:block mt-4 md:mt-0 md:ml-4">Jhalddryg@gmail.com</span>
         </div>
       </div>
     </section>
