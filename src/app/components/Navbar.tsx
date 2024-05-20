@@ -10,15 +10,15 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/16/solid";
 export const navLinks = [
   {
     path: "#about",
-    title: "About",
+    title: "Sobre Mi",
   },
   {
     path: "#projects",
-    title: "Projects",
+    title: "Proyectos",
   },
   {
     path: "#contact",
-    title: "Contact",
+    title: "Contacto",
   },
 ];
 
@@ -29,9 +29,9 @@ const Navbar = () => {
       <div className="flex flex-wrap items-center justify-between mx-auto px-4 py-2">
         <Link
           href="/"
-          className="text-2xl md:text-5xl text-white font-semibold"
+          className="text-2xl md:text-5xl text-white font-semibold hover:text-slate-100"
         >
-          Portfolio
+          Jhalddry
         </Link>
         <div className="mobile-menu block md:hidden">
           {!navbarOpen ? (

@@ -7,7 +7,7 @@ const projectsData = [
     image: "images/projects/tictactoe.png",
     gitUrl: "https://github.com/jhalddry/tic-tac-toe",
     url: "https://tic-tac-toe-jhalddry.netlify.app/",
-    tag: ["All", "React"],
+    tag: ["Todos", "React"],
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ const projectsData = [
     image: "images/projects/pomodoro.png",
     gitUrl: "https://github.com/jhalddry/pomodoro",
     url: "https://66442ec965508a41d251c757--pomodoro-native-jhalddry.netlify.app",
-    tag: ["All", "Native"],
+    tag: ["Todos", "Native"],
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ const projectsData = [
     image: "images/projects/pokemon.png",
     gitUrl: "https://github.com/jhalddry/pokemon-dashboard-nextjs",
     url: "https://pokemon-nextjs-jhalddry-jhalddrys-projects.vercel.app/",
-    tag: ["All", "NextJS"],
+    tag: ["Todos", "NextJS"],
   },
   {
     id: 4,
@@ -37,7 +37,7 @@ const projectsData = [
     image: "images/projects/gifs.png",
     gitUrl: "https://github.com/jhalddry/react-gifexpert",
     url: "https://gif-searcher-jhalddry.netlify.app/",
-    tag: ["All", "React"],
+    tag: ["Todos", "React"],
   },
 ];
 

@@ -2,7 +2,7 @@
 
 import { useState, useTransition } from "react";
 import Image from "next/image";
-import TabButton from "./helpers/TabButton";
+import TabButton from "../helpers/TabButton";
 
 const TAB_DATA = [
   {
@@ -18,17 +18,6 @@ const TAB_DATA = [
         <li>Tailwind</li>
         <li>Git</li>
         <li>GitHub</li>
-      </ul>
-    ),
-  },
-  {
-    title: "Educacion",
-    id: "educacion",
-    content: (
-      <ul className="list-disc pl-2">
-        <li>Educacion 1</li>
-        <li>Educacion 2</li>
-        <li>Educacion 3</li>
       </ul>
     ),
   },
@@ -56,7 +45,7 @@ const AboutSection = () => {
   };
 
   return (
-    <section className="text-white">
+    <section id="about" className="text-white">
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
         {/* <Image src="/images/develop.jpg" width={200} height={200} alt="image" /> */}
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
@@ -77,14 +66,6 @@ const AboutSection = () => {
             </TabButton>
 
             <TabButton
-              selectTab={() => handleTabChange("educacion")}
-              active={tab === "educacion"}
-            >
-              {" "}
-              Educacion{" "}
-            </TabButton>
-
-            <TabButton
               selectTab={() => handleTabChange("certificaciones")}
               active={tab === "certificaciones"}
             >
@@ -97,7 +78,7 @@ const AboutSection = () => {
           </div>
         </div>
       </div>
-      
+
     </section>
   );
 };
