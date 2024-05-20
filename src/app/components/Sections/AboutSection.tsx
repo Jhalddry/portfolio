@@ -50,11 +50,16 @@ const AboutSection = () => {
         {/* <Image src="/images/develop.jpg" width={200} height={200} alt="image" /> */}
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bol text-white mb-4">Sobre Mi</h2>
-          <p className="text-base md:text-lg">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam
-            consequatur aspernatur perspiciatis sapiente corrupti, fugit
-            quisquam nam animi non reprehenderit ipsa temporibus possimus autem
-            nostrum qui laborum. Non, reprehenderit iste!
+          <p className="text-base md:text-lg text-slate-300">
+            Soy un desarrollador web con conocimientos en JavaScript, React, Node, Express, MongoDB, Firebase y React Native. Manejo Bootstrap y soy experto en React Hooks, la API Fetch y Redux.
+          </p>
+
+          <p className="text-base md:text-lg text-slate-300 mt-4">
+            Estoy en constante aprendizaje, especialmente en Next.js y TailwindCSS. Soy entusiasta y me gusta trabajar en equipo, comunicándome y resolviendo problemas.
+          </p>
+
+          <p className="text-base md:text-lg text-slate-300 mt-4">
+            Tengo experiencia en crear aplicaciones web y móviles con tecnologías como React, Redux y JavaScript. Aunque mi experiencia profesional es limitada, estoy dispuesto a aprender y enfrentar nuevas tecnologías para ayudar a una empresa a alcanzar sus objetivos.
           </p>
           <div className="flex flex-row mt-8">
             <TabButton
