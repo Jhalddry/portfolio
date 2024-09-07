@@ -27,8 +27,8 @@ export const HeroSection = () => {
               </span>
             </a>
             <a
-              href="/download/jhalddry_cv.pdf" // Reemplaza con la ruta correcta a tu archivo PDF
-              download="jhalddry_cv.pdf" // Nombre con el que se descargará el archivo
+              href="/download/Jhalddry-CV.pdf"
+              download="Jhalddry-CV.pdf"
               className="block px-0.5 py-0.5 w-full sm:w-fit rounded-full bg-gradient-to-br from-[#C6D8F7] via-[#1ABC9C] to-[#3b3f47] hover:bg-slate-800 text-white"
             >
               <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2 font-medium">

@@ -47,15 +47,14 @@ const AboutSection = () => {
   return (
     <section id="about" className="text-white">
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-        {/* <Image src="/images/develop.jpg" width={200} height={200} alt="image" /> */}
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bol text-white mb-4">Sobre Mi</h2>
           <p className="text-base md:text-lg text-slate-300">
-            Soy un desarrollador web con conocimientos en JavaScript, React, Node, Express, MongoDB, Firebase y React Native. Manejo Bootstrap y soy experto en React Hooks, la API Fetch y Redux.
+            Soy un desarrollador web con conocimientos en JavaScript, Typescript, C#, .Net, React, Node, Express, MongoDB, Firebase y React Native. Manejo Tailwind y soy experto en React Hooks, API Fetch y Redux.
           </p>
 
           <p className="text-base md:text-lg text-slate-300 mt-4">
-            Estoy en constante aprendizaje, especialmente en Next.js y TailwindCSS. Soy entusiasta y me gusta trabajar en equipo, comunicándome y resolviendo problemas.
+            Estoy en constante aprendizaje, especialmente en C# y .Net. Soy entusiasta y me gusta trabajar en equipo, comunicándome y resolviendo problemas.
           </p>
 
           <p className="text-base md:text-lg text-slate-300 mt-4">
