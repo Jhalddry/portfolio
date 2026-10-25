@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { CV_EN, CV_ES } from "../data";
 import CodeRain from "./CodeRain";
 import { Arrow, LangSwitch, ScrollLink, ThemeToggle, Tx, goTo, useSite } from "./ui";
 
@@ -144,7 +143,7 @@ export default function Hero() {
           <ScrollLink id="contacto" className="group inline-flex items-center gap-2 rounded-full bg-acc px-6 py-3 font-bold text-black transition hover:brightness-110">
             <Tx>{t.hero.cta}</Tx> <Arrow className="transition group-hover:translate-x-1" />
           </ScrollLink>
-          <a href={lang === "es" ? CV_ES : CV_EN} download className="ul text-mute transition hover:text-fg">
+          <a href={`/cv/${lang}`} download className="ul text-mute transition hover:text-fg">
             <Tx>{t.hero.cv}</Tx>
           </a>
         </div>
