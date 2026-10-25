@@ -94,7 +94,7 @@ export const COPY: Record<Lang, Copy> = {
           "Revisión de seguridad entre negocios: ninguno puede ver los datos de otro.",
         ],
         stack: ["Next.js 16", "React 19", "TypeScript", "MongoDB", "MUI", "Vercel AI SDK", "Zod", "MCP", "Meta API", "Vitest"],
-        links: [{ label: "Ver en producción", href: "https://crm.zero.com.do/" }],
+        links: [{ label: "Ver en producción", href: "https://www.zero.com.do/productos/crm" }],
       },
       {
         id: "zero",
@@ -110,7 +110,7 @@ export const COPY: Record<Lang, Copy> = {
           "Habilitación de e-CF ante la DGII en 15 pasos, con alertas por Slack y correo.",
         ],
         stack: ["Next.js 15", "React 19", "TypeScript", "PostgreSQL", "Drizzle", "WebRTC", "AWS S3", "GitHub Actions", "Vercel"],
-        links: [{ label: "Ver en producción", href: "https://app.zero.com.do/" }],
+        links: [{ label: "Ver en producción", href: "https://www.zero.com.do/" }],
       },
       {
         id: "cancha",
@@ -256,7 +256,7 @@ export const COPY: Record<Lang, Copy> = {
           "A security review across businesses: no business can see another's data.",
         ],
         stack: ["Next.js 16", "React 19", "TypeScript", "MongoDB", "MUI", "Vercel AI SDK", "Zod", "MCP", "Meta API", "Vitest"],
-        links: [{ label: "See it live", href: "https://crm.zero.com.do/" }],
+        links: [{ label: "See it live", href: "https://www.zero.com.do/productos/crm" }],
       },
       {
         id: "zero",
@@ -272,7 +272,7 @@ export const COPY: Record<Lang, Copy> = {
           "e-CF enrollment with the DGII in 15 steps, with Slack and email alerts.",
         ],
         stack: ["Next.js 15", "React 19", "TypeScript", "PostgreSQL", "Drizzle", "WebRTC", "AWS S3", "GitHub Actions", "Vercel"],
-        links: [{ label: "See it live", href: "https://app.zero.com.do/" }],
+        links: [{ label: "See it live", href: "https://www.zero.com.do/" }],
       },
       {
         id: "cancha",
