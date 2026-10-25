@@ -3,6 +3,28 @@
 import { useState } from "react";
 import { Arrow, Heading, Reveal, Star, Tag, Tx, useSite, useSpot } from "./ui";
 
+function CredRow({ label, value, copy, copied }: { label: string; value: string; copy: string; copied: string }) {
+  const [ok, setOk] = useState(false);
+  const onCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(value);
+      setOk(true);
+      setTimeout(() => setOk(false), 1600);
+    } catch {}
+  };
+  return (
+    <div className="flex items-center justify-between gap-3 rounded-xl bg-bg/60 px-3 py-2">
+      <div className="min-w-0">
+        <p className="text-[11px] text-mute">{label}</p>
+        <p className="select-all truncate text-sm text-fg">{value}</p>
+      </div>
+      <button type="button" onClick={onCopy} className="shrink-0 rounded-full border border-line px-3 py-1 text-xs transition hover:border-acct hover:text-acct">
+        {ok ? copied : copy}
+      </button>
+    </div>
+  );
+}
+
 export default function Products() {
   const { t } = useSite();
   const [i, setI] = useState(0);
@@ -56,6 +78,17 @@ export default function Products() {
                 </li>
               ))}
             </ul>
+            {p.creds && (
+              <div className="mt-6 rounded-2xl border border-dashed border-gold/60 p-4">
+                <p className="text-xs font-bold text-gold">{t.work.creds.title}</p>
+                <p className="mb-3 mt-0.5 text-xs text-mute">{t.work.creds.hint}</p>
+                <div className="grid gap-2 sm:grid-cols-2">
+                  <CredRow label={t.work.creds.email} value={p.creds.email} copy={t.work.creds.copy} copied={t.work.creds.copied} />
+                  <CredRow label={t.work.creds.password} value={p.creds.password} copy={t.work.creds.copy} copied={t.work.creds.copied} />
+                </div>
+              </div>
+            )}
+
             <div className="mt-8 flex flex-wrap gap-3 text-sm">
               {p.links.map((l, n) => (
                 <a

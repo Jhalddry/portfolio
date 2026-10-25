@@ -21,6 +21,7 @@ type Product = {
   name: string;
   tag: string;
   badge?: string;
+  creds?: { email: string; password: string };
   role: string;
   desc: string;
   points: string[];
@@ -31,7 +32,14 @@ type Product = {
 export type Copy = {
   nav: { work: string; plans: string; contact: string };
   hero: { hi: string; pre: string; phrases: string[]; intro: string; cta: string; cv: string; scroll: string };
-  work: { label: string; title: string; more: string; moreItems: { name: string; text: string }[]; private: string };
+  work: {
+    label: string;
+    title: string;
+    more: string;
+    moreItems: { name: string; text: string }[];
+    private: string;
+    creds: { title: string; hint: string; email: string; password: string; copy: string; copied: string };
+  };
   products: Product[];
   plans: { label: string; title: string; intro: string; play: string; pause: string; step: string; schemes: Scheme[] };
   method: { label: string; items: { t: string; d: string }[] };
@@ -80,6 +88,7 @@ export const COPY: Record<Lang, Copy> = {
         { name: "DNK · vía Nerdery", text: "Páginas y funciones de una aplicación empresarial para un cliente de Estados Unidos, junto a su equipo de ingeniería." },
       ],
       private: "Zero CRM y Zero son productos de la empresa: el código es privado, por eso no hay repositorio. Puedes ver ambos en producción.",
+      creds: { title: "Cuenta de prueba", hint: "Úsala en la demo para iniciar sesión y recorrer la app.", email: "Correo", password: "Contraseña", copy: "Copiar", copied: "Copiado" },
     },
     products: [
       {
@@ -87,6 +96,7 @@ export const COPY: Record<Lang, Copy> = {
         name: "La Cancha",
         tag: "Proyecto propio · app móvil",
         badge: "Proyecto estrella",
+        creds: { email: "tester@lacancha.com", password: "Tester123!" },
         role: "Desarrollador único · may – jun 2026",
         desc: "App para organizar partidos deportivos en Venezuela: buscas un partido cerca, te unes, chateas con el grupo y calificas a los jugadores. La diseñé, construí y publiqué yo solo.",
         points: [
@@ -243,6 +253,7 @@ export const COPY: Record<Lang, Copy> = {
         { name: "DNK · via Nerdery", text: "Pages and features of an enterprise application for a US client, working alongside their engineering team." },
       ],
       private: "Zero CRM and Zero are company products: the code is private, so there is no repository. You can see both live.",
+      creds: { title: "Test account", hint: "Use it in the demo to sign in and explore the app.", email: "Email", password: "Password", copy: "Copy", copied: "Copied" },
     },
     products: [
       {
@@ -250,6 +261,7 @@ export const COPY: Record<Lang, Copy> = {
         name: "La Cancha",
         tag: "Own project · mobile app",
         badge: "Flagship project",
+        creds: { email: "tester@lacancha.com", password: "Tester123!" },
         role: "Solo developer · May – Jun 2026",
         desc: "An app to organize pickup sports games in Venezuela: find a game nearby, join, chat with the group and rate the players. I designed, built and shipped it alone.",
         points: [
