@@ -79,9 +79,9 @@ export default function Contact() {
   };
 
   return (
-    <section id="contacto" className="relative scroll-mt-16 overflow-hidden">
+    <section id="contacto" className="relative scroll-mt-28 md:scroll-mt-16 overflow-hidden">
       <pre aria-hidden className="pointer-events-none absolute right-0 top-16 hidden select-none text-[15px] leading-7 text-acct/[0.34] [mask-image:linear-gradient(to_left,#000_30%,transparent_98%)] md:block">{CODE}</pre>
-      <div className="relative mx-auto max-w-5xl px-5 py-24 md:py-32">
+      <div className="relative mx-auto max-w-5xl px-5 py-16 md:py-32">
       <Heading>{c.label}</Heading>
       <Reveal>
         <h2 className="max-w-3xl text-[clamp(1.8rem,5vw,3.4rem)] font-extrabold leading-tight tracking-tighter">

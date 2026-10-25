@@ -169,7 +169,8 @@ export function useSpot<T extends HTMLElement>() {
 let cancelScroll = () => {};
 export function goTo(id: string) {
   const el = id ? document.getElementById(id) : null;
-  const top = el ? Math.max(0, el.getBoundingClientRect().top + window.scrollY - 52) : 0;
+  const headerH = document.querySelector("header")?.getBoundingClientRect().height ?? 52;
+  const top = el ? Math.max(0, el.getBoundingClientRect().top + window.scrollY - headerH + 4) : 0;
   const land = () => {
     history.replaceState(null, "", id ? `#${id}` : location.pathname);
     if (!el) return;

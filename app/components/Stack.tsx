@@ -23,7 +23,7 @@ function Row({ items, rev = false }: { items: string[]; rev?: boolean }) {
 export default function Stack() {
   const { t } = useSite();
   return (
-    <section className="py-20 md:py-28">
+    <section className="py-12 md:py-28">
       <div className="mx-auto grid max-w-5xl gap-4 px-5 md:grid-cols-3">
         {t.method.items.map((m, i) => (
           <Reveal key={i} delay={i * 90}>
@@ -39,7 +39,7 @@ export default function Stack() {
           </Reveal>
         ))}
       </div>
-      <div className="mt-16 space-y-3" aria-hidden>
+      <div className="mt-10 space-y-3 md:mt-16" aria-hidden>
         <Row items={STACK_A} />
         <Row items={STACK_B} rev />
       </div>

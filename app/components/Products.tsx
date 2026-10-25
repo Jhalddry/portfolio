@@ -9,37 +9,37 @@ export default function Products() {
   const p = t.products[i];
   const spot = useSpot<HTMLDivElement>();
   return (
-    <section id="trabajo" className="scroll-mt-16">
+    <section id="trabajo" className="scroll-mt-28 md:scroll-mt-16">
       <div ref={spot} className="dots">
-      <div className="mx-auto max-w-5xl px-5 pb-16 pt-24 md:pt-32">
+      <div className="mx-auto max-w-5xl px-5 pb-12 pt-24 md:pb-16 md:pt-32">
       <Heading>{t.work.label}</Heading>
       <Reveal>
-        <h2 className="mb-12 max-w-3xl text-[clamp(1.6rem,4vw,2.6rem)] font-extrabold leading-tight tracking-tighter">
+        <h2 className="mb-8 max-w-3xl text-[clamp(1.5rem,4vw,2.6rem)] md:mb-12 font-extrabold leading-tight tracking-tighter">
           <Tx>{t.work.title}</Tx>
         </h2>
       </Reveal>
 
       <Reveal>
         <div className="grid gap-8 md:grid-cols-[260px_1fr]">
-          <div role="group" aria-label={t.work.label} className="flex gap-2 overflow-x-auto md:block md:space-y-1 md:overflow-visible">
+          <div role="group" aria-label={t.work.label} className="grid grid-cols-3 gap-2 md:block md:space-y-1">
             {t.products.map((x, n) => (
               <button
                 key={x.id}
                 aria-pressed={n === i}
                 onClick={() => setI(n)}
                 onMouseEnter={() => window.matchMedia("(hover: hover)").matches && setI(n)}
-                className={`shrink-0 rounded-2xl border px-5 py-3 text-left transition-all md:w-full ${n === i ? "card border-acct text-fg" : "border-transparent text-mute hover:text-fg"}`}
+                className={`rounded-2xl border px-2 py-2.5 text-center transition-all md:w-full md:px-5 md:py-3 md:text-left ${n === i ? "card border-acct text-fg" : "border-transparent text-mute hover:text-fg"}`}
               >
-                <span className="block text-xl font-extrabold tracking-tight md:text-2xl">{x.name}</span>
-                <span className="block text-[11px] text-mute">{x.tag}</span>
+                <span className="block text-sm font-extrabold tracking-tight sm:text-base md:text-2xl">{x.name}</span>
+                <span className="hidden text-[11px] text-mute md:block">{x.tag}</span>
               </button>
             ))}
           </div>
 
-          <article key={`${p.id}`} className="rise card rounded-3xl p-6 md:p-8">
+          <article key={`${p.id}`} className="rise card rounded-3xl p-5 sm:p-6 md:p-8">
             <p className="text-xs text-acct">{p.tag}</p>
             <p className="mt-1 text-xs text-mute">{p.role}</p>
-            <p className="mt-5 text-fg/90">{p.desc}</p>
+            <p className="mt-5 text-sm text-fg/90 sm:text-base">{p.desc}</p>
             <ul className="mt-6 space-y-3">
               {p.points.map((x, n) => (
                 <li key={x} className="rise flex gap-3 text-sm text-mute" style={{ animationDelay: `${120 + n * 90}ms` }}>
@@ -74,7 +74,7 @@ export default function Products() {
       </div>
       </div>
 
-      <div className="mx-auto max-w-5xl px-5 pb-24 md:pb-32">
+      <div className="mx-auto max-w-5xl px-5 pb-16 md:pb-32">
       <Reveal>
         <div className="border-t border-line pt-8">
           <p className="mb-4 text-xs uppercase tracking-[0.18em] text-mute">

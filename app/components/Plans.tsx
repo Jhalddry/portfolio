@@ -56,7 +56,7 @@ export default function Plans() {
   };
 
   return (
-    <section id="planos" ref={root} className="bp scroll-mt-16 border-y border-line py-24 md:py-32">
+    <section id="planos" ref={root} className="bp scroll-mt-28 md:scroll-mt-16 border-y border-line py-16 md:py-32">
       <div className="mx-auto max-w-5xl px-5">
         <Heading>{t.plans.label}</Heading>
         <Reveal>
@@ -83,27 +83,27 @@ export default function Plans() {
           </div>
 
           {/* esquema */}
-          <div key={tab} className="rise mt-8 flex flex-col items-stretch md:flex-row md:items-stretch">
+          <div key={tab} className="rise mt-8 flex flex-col items-stretch lg:flex-row">
             {scheme.steps.map((s, i) => (
               <Fragment key={s.t}>
                 <button
                   type="button"
                   onClick={() => pick(i)}
                   aria-pressed={i === step}
-                  className={`card relative flex-1 rounded-2xl p-4 text-left backdrop-blur transition-all duration-300 ${
-                    i === step ? "-translate-y-1 border-acct shadow-[0_0_0_1px_var(--acct),0_12px_40px_-14px_var(--acct)]" : "border-line hover:border-mute"
+                  className={`card relative flex flex-1 items-center gap-3 rounded-2xl px-4 py-3 text-left backdrop-blur transition-all duration-300 lg:block lg:p-4 ${
+                    i === step ? "translate-x-1 border-acct lg:-translate-y-1 lg:translate-x-0 shadow-[0_0_0_1px_var(--acct),0_12px_40px_-14px_var(--acct)]" : "border-line hover:border-mute"
                   }`}
                 >
                   <span className={`text-[11px] transition-colors ${i === step ? "text-acct" : "text-mute"}`}>0{i + 1}</span>
-                  <span className="mt-1 block text-sm font-bold leading-snug">{s.t}</span>
+                  <span className="block text-sm font-bold leading-snug lg:mt-1">{s.t}</span>
                 </button>
-                {i < n - 1 && <span className="conn h-7 w-px self-center md:h-px md:w-8" data-on={i === step ? "true" : "false"} aria-hidden />}
+                {i < n - 1 && <span className="conn ml-6 h-3 w-px self-start lg:ml-0 lg:h-px lg:w-8 lg:self-center" data-on={i === step ? "true" : "false"} aria-hidden />}
               </Fragment>
             ))}
           </div>
 
           {/* detalle del paso */}
-          <div className="card mt-6 rounded-3xl p-6 backdrop-blur md:p-8">
+          <div className="card mt-6 rounded-3xl p-5 backdrop-blur sm:p-6 md:p-8">
             <div className="flex items-start justify-between gap-4">
               <p className="text-xs text-acct">
                 <Tx>{scheme.title}</Tx>

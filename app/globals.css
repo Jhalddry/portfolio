@@ -185,7 +185,7 @@ body {
   left: 50%;
   margin-left: -3.5px;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .conn[data-on="true"]::after {
     animation-name: packet-x;
     left: 0;
