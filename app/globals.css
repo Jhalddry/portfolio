@@ -9,6 +9,8 @@
   --line: #26262a;
   --acc: #c6ff3d;
   --acct: #c6ff3d;
+  --gold: #ffc533;
+  --goldglow: rgba(255, 197, 51, 0.35);
   --grid: rgba(255, 255, 255, 0.055);
   --gridhot: rgba(198, 255, 61, 0.38);
   --shadow: none;
@@ -22,6 +24,8 @@
   --line: #c7c3b4;
   --acc: #c6ff3d;
   --acct: #2a5000;
+  --gold: #b97c00;
+  --goldglow: rgba(185, 124, 0, 0.3);
   --grid: rgba(17, 17, 15, 0.09);
   --gridhot: rgba(42, 80, 0, 0.5);
   --shadow: 0 1px 2px rgba(17, 17, 15, 0.06), 0 10px 30px -12px rgba(17, 17, 15, 0.18);
@@ -36,6 +40,7 @@
   --color-line: var(--line);
   --color-acc: var(--acc);
   --color-acct: var(--acct);
+  --color-gold: var(--gold);
   --font-mono: var(--font-mono), ui-monospace, "SFMono-Regular", Consolas, monospace;
 }
 
@@ -296,6 +301,51 @@ body {
   background: var(--acct);
   transform-origin: left;
   animation: hit-line 0.9s ease both;
+}
+
+@keyframes star-glow {
+  0%,
+  100% {
+    transform: scale(1) rotate(0deg);
+    filter: drop-shadow(0 0 0 transparent);
+  }
+  50% {
+    transform: scale(1.25) rotate(18deg);
+    filter: drop-shadow(0 0 7px var(--gold));
+  }
+}
+.star-glow {
+  animation: star-glow 2.8s ease-in-out infinite;
+}
+
+/* distintivo dorado: proyecto estrella */
+.gold-pill {
+  position: relative;
+  overflow: hidden;
+  color: #1a1200;
+  background: linear-gradient(120deg, #ffe58a 0%, #ffc533 45%, #d99200 100%);
+  box-shadow: 0 0 0 1px rgba(255, 197, 51, 0.5), 0 6px 22px -8px var(--goldglow);
+}
+.gold-pill::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(105deg, transparent 35%, rgba(255, 255, 255, 0.65) 50%, transparent 65%);
+  transform: translateX(-120%);
+  animation: gold-sheen 3.6s ease-in-out infinite;
+}
+@keyframes gold-sheen {
+  0%,
+  55% {
+    transform: translateX(-120%);
+  }
+  100% {
+    transform: translateX(120%);
+  }
+}
+.gold-card {
+  border-color: var(--gold) !important;
+  box-shadow: 0 0 0 1px var(--gold), 0 18px 60px -22px var(--goldglow);
 }
 
 @keyframes rise {

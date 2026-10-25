@@ -20,6 +20,7 @@ type Product = {
   id: string;
   name: string;
   tag: string;
+  badge?: string;
   role: string;
   desc: string;
   points: string[];
@@ -82,6 +83,26 @@ export const COPY: Record<Lang, Copy> = {
     },
     products: [
       {
+        id: "cancha",
+        name: "La Cancha",
+        tag: "Proyecto propio · app móvil",
+        badge: "Proyecto estrella",
+        role: "Desarrollador único · may – jun 2026",
+        desc: "App para organizar partidos deportivos en Venezuela: buscas un partido cerca, te unes, chateas con el grupo y calificas a los jugadores. La diseñé, construí y publiqué yo solo en cinco semanas.",
+        points: [
+          "Chat en tiempo real con confirmación de lectura, indicador de escritura y mensajes no leídos.",
+          "Seguridad por fila en cada tabla de la base de datos, y reputación e insignias que se calculan solas.",
+          "Pensada para Venezuela: precios en dólares y bolívares, con Pago Móvil, Zelle y USDT.",
+          "Sistema de diseño propio, con modos claro y oscuro.",
+        ],
+        stack: ["React Native", "Expo SDK 54", "TypeScript", "Supabase", "Zustand"],
+        links: [
+          { label: "Probar la app", href: "https://appetize.io/app/b_7pp754x34hy5gigrs7j36bs57m" },
+          { label: "Código", href: "https://github.com/Jhalddry/la-cancha" },
+          { label: "Expo", href: "https://expo.dev/accounts/jhalddry/projects/la-cancha" },
+        ],
+      },
+      {
         id: "crm",
         name: "Zero CRM",
         tag: "CRM con IA para colegios y organizaciones",
@@ -111,25 +132,6 @@ export const COPY: Record<Lang, Copy> = {
         ],
         stack: ["Next.js 15", "React 19", "TypeScript", "PostgreSQL", "Drizzle", "WebRTC", "AWS S3", "GitHub Actions", "Vercel"],
         links: [{ label: "Ver en producción", href: "https://www.zero.com.do/" }],
-      },
-      {
-        id: "cancha",
-        name: "La Cancha",
-        tag: "Proyecto propio · app móvil",
-        role: "Desarrollador único · may – jun 2026",
-        desc: "App para organizar partidos deportivos en Venezuela: buscas un partido cerca, te unes, chateas con el grupo y calificas a los jugadores. La diseñé, construí y publiqué yo solo en cinco semanas.",
-        points: [
-          "Chat en tiempo real con confirmación de lectura, indicador de escritura y mensajes no leídos.",
-          "Seguridad por fila en cada tabla de la base de datos, y reputación e insignias que se calculan solas.",
-          "Pensada para Venezuela: precios en dólares y bolívares, con Pago Móvil, Zelle y USDT.",
-          "Sistema de diseño propio, con modos claro y oscuro.",
-        ],
-        stack: ["React Native", "Expo SDK 54", "TypeScript", "Supabase", "Zustand"],
-        links: [
-          { label: "Probar la app", href: "https://appetize.io/app/b_7pp754x34hy5gigrs7j36bs57m" },
-          { label: "Código", href: "https://github.com/Jhalddry/la-cancha" },
-          { label: "Expo", href: "https://expo.dev/accounts/jhalddry/projects/la-cancha" },
-        ],
       },
     ],
     plans: {
@@ -244,6 +246,26 @@ export const COPY: Record<Lang, Copy> = {
     },
     products: [
       {
+        id: "cancha",
+        name: "La Cancha",
+        tag: "Own project · mobile app",
+        badge: "Flagship project",
+        role: "Solo developer · May – Jun 2026",
+        desc: "An app to organize pickup sports games in Venezuela: find a game nearby, join, chat with the group and rate the players. I designed, built and shipped it alone in five weeks.",
+        points: [
+          "Real-time chat with read receipts, typing indicator and unread counts.",
+          "Row-level security on every database table, and reputation and badges that are calculated automatically.",
+          "Built for Venezuela: prices in dollars and bolívares, with Pago Móvil, Zelle and USDT.",
+          "A custom design system with light and dark modes.",
+        ],
+        stack: ["React Native", "Expo SDK 54", "TypeScript", "Supabase", "Zustand"],
+        links: [
+          { label: "Try the app", href: "https://appetize.io/app/b_7pp754x34hy5gigrs7j36bs57m" },
+          { label: "Code", href: "https://github.com/Jhalddry/la-cancha" },
+          { label: "Expo", href: "https://expo.dev/accounts/jhalddry/projects/la-cancha" },
+        ],
+      },
+      {
         id: "crm",
         name: "Zero CRM",
         tag: "AI-powered CRM for schools and organizations",
@@ -273,25 +295,6 @@ export const COPY: Record<Lang, Copy> = {
         ],
         stack: ["Next.js 15", "React 19", "TypeScript", "PostgreSQL", "Drizzle", "WebRTC", "AWS S3", "GitHub Actions", "Vercel"],
         links: [{ label: "See it live", href: "https://www.zero.com.do/" }],
-      },
-      {
-        id: "cancha",
-        name: "La Cancha",
-        tag: "Own project · mobile app",
-        role: "Solo developer · May – Jun 2026",
-        desc: "An app to organize pickup sports games in Venezuela: find a game nearby, join, chat with the group and rate the players. I designed, built and shipped it alone in five weeks.",
-        points: [
-          "Real-time chat with read receipts, typing indicator and unread counts.",
-          "Row-level security on every database table, and reputation and badges that are calculated automatically.",
-          "Built for Venezuela: prices in dollars and bolívares, with Pago Móvil, Zelle and USDT.",
-          "A custom design system with light and dark modes.",
-        ],
-        stack: ["React Native", "Expo SDK 54", "TypeScript", "Supabase", "Zustand"],
-        links: [
-          { label: "Try the app", href: "https://appetize.io/app/b_7pp754x34hy5gigrs7j36bs57m" },
-          { label: "Code", href: "https://github.com/Jhalddry/la-cancha" },
-          { label: "Expo", href: "https://expo.dev/accounts/jhalddry/projects/la-cancha" },
-        ],
       },
     ],
     plans: {

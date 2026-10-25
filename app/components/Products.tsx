@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Arrow, Heading, Reveal, Tag, Tx, useSite, useSpot } from "./ui";
+import { Arrow, Heading, Reveal, Star, Tag, Tx, useSite, useSpot } from "./ui";
 
 export default function Products() {
   const { t } = useSite();
@@ -28,15 +28,16 @@ export default function Products() {
                 aria-pressed={n === i}
                 onClick={() => setI(n)}
                 onMouseEnter={() => window.matchMedia("(hover: hover)").matches && setI(n)}
-                className={`rounded-2xl border px-2 py-2.5 text-center transition-all md:w-full md:px-5 md:py-3 md:text-left ${n === i ? "card border-acct text-fg" : "border-transparent text-mute hover:text-fg"}`}
+                className={`relative rounded-2xl border px-2 py-2.5 text-center transition-all md:w-full md:px-5 md:py-3 md:text-left ${n === i ? (x.badge ? "card gold-card text-fg" : "card border-acct text-fg") : "border-transparent text-mute hover:text-fg"}`}
               >
                 <span className="block text-sm font-extrabold tracking-tight sm:text-base md:text-2xl">{x.name}</span>
+                {x.badge && <Star className="star-glow absolute right-1.5 top-1.5 h-3.5 w-3.5 text-gold md:right-3 md:top-3 md:h-4 md:w-4" />}
                 <span className="hidden text-[11px] text-mute md:block">{x.tag}</span>
               </button>
             ))}
           </div>
 
-          <article key={`${p.id}`} className="rise card rounded-3xl p-5 sm:p-6 md:p-8">
+          <article key={`${p.id}`} className={`rise card rounded-3xl p-5 sm:p-6 md:p-8 ${p.badge ? "gold-card" : ""}`}>
             <p className="text-xs text-acct">{p.tag}</p>
             <p className="mt-1 text-xs text-mute">{p.role}</p>
             <p className="mt-5 text-sm text-fg/90 sm:text-base">{p.desc}</p>
