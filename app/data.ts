@@ -95,7 +95,7 @@ export const COPY: Record<Lang, Copy> = {
           "Pensada para Venezuela: precios en dólares y bolívares, con Pago Móvil, Zelle y USDT.",
           "Sistema de diseño propio, con modos claro y oscuro.",
         ],
-        stack: ["React Native", "Expo SDK 54", "TypeScript", "Supabase", "Zustand"],
+        stack: ["React Native", "Expo SDK 58", "TypeScript", "Supabase", "Zustand"],
         links: [
           { label: "Probar la app", href: "https://appetize.io/app/b_7pp754x34hy5gigrs7j36bs57m" },
           { label: "Código", href: "https://github.com/Jhalddry/la-cancha" },
@@ -258,7 +258,7 @@ export const COPY: Record<Lang, Copy> = {
           "Built for Venezuela: prices in dollars and bolívares, with Pago Móvil, Zelle and USDT.",
           "A custom design system with light and dark modes.",
         ],
-        stack: ["React Native", "Expo SDK 54", "TypeScript", "Supabase", "Zustand"],
+        stack: ["React Native", "Expo SDK 58", "TypeScript", "Supabase", "Zustand"],
         links: [
           { label: "Try the app", href: "https://appetize.io/app/b_7pp754x34hy5gigrs7j36bs57m" },
           { label: "Code", href: "https://github.com/Jhalddry/la-cancha" },
