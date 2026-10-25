@@ -13,8 +13,12 @@ export async function GET(req: Request, { params }: { params: Promise<{ lang: st
   const upstream = await fetch(new URL(`/${file}`, req.url));
   if (!upstream.ok) return new Response("Not found", { status: 404 });
 
-  return new Response(await upstream.arrayBuffer(), {
+  /* Content-Length explícito: sin él Safari muestra "-1 byte" al descargar */
+  const body = await upstream.arrayBuffer();
+
+  return new Response(body, {
     headers: {
+      "Content-Length": String(body.byteLength),
       "Content-Type": "application/octet-stream",
       "Content-Disposition": `attachment; filename="${file}"; filename*=UTF-8''${encodeURIComponent(file)}`,
       "X-Content-Type-Options": "nosniff",
