@@ -88,7 +88,7 @@ export const COPY: Record<Lang, Copy> = {
         tag: "Proyecto propio · app móvil",
         badge: "Proyecto estrella",
         role: "Desarrollador único · may – jun 2026",
-        desc: "App para organizar partidos deportivos en Venezuela: buscas un partido cerca, te unes, chateas con el grupo y calificas a los jugadores. La diseñé, construí y publiqué yo solo en cinco semanas.",
+        desc: "App para organizar partidos deportivos en Venezuela: buscas un partido cerca, te unes, chateas con el grupo y calificas a los jugadores. La diseñé, construí y publiqué yo solo.",
         points: [
           "Chat en tiempo real con confirmación de lectura, indicador de escritura y mensajes no leídos.",
           "Seguridad por fila en cada tabla de la base de datos, y reputación e insignias que se calculan solas.",
@@ -251,7 +251,7 @@ export const COPY: Record<Lang, Copy> = {
         tag: "Own project · mobile app",
         badge: "Flagship project",
         role: "Solo developer · May – Jun 2026",
-        desc: "An app to organize pickup sports games in Venezuela: find a game nearby, join, chat with the group and rate the players. I designed, built and shipped it alone in five weeks.",
+        desc: "An app to organize pickup sports games in Venezuela: find a game nearby, join, chat with the group and rate the players. I designed, built and shipped it alone.",
         points: [
           "Real-time chat with read receipts, typing indicator and unread counts.",
           "Row-level security on every database table, and reputation and badges that are calculated automatically.",
